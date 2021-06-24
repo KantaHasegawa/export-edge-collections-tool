@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "netscape-bookmarks": "^0.1.1"
+    "netscape-bookmarks": "^0.1.1",
+    "sqlite-async": "^1.1.1",
+    "sqlite3": "^5.0.2"
   }
 }
