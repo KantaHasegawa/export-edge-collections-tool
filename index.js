@@ -21,7 +21,6 @@ const readUserInput = (question) => {
 
   return new Promise((resolve, reject) => {
     readline.question(question, (answer) => {
-      answer = answer || "./";
       resolve(answer);
       readline.close();
     });
@@ -31,10 +30,13 @@ const readUserInput = (question) => {
 const main = async () => {
   const importDirectory = await readUserInput(
     green +
-      "### Please enter the path for the edge collections file\n### example in Linux: /home/{userName}/.config/microsoft-edge-dev/Default/Collections/collectionsSQLite\n\n>> " +
+      "### Please enter the path for the edge collections file\n### Example in Linux: /home/{userName}/.config/microsoft-edge-dev/Default/Collections/collectionsSQLite\n### Example in Mac: /Users/{UserName}/Library/Application Support/Microsoft Edge/Default/Collections/collectionsSQLite\n### Example in Windows: C:\\Users\\{UserName}\\AppData\\Local\\Microsoft\\Edge\\User Data\\collectionsSQLite\n\n>> " +
       reset
   );
   try {
+    if (!importDirectory){
+      throw `[ERROR] Please enter the path for the edge collections file`;
+    }
     const db = await Database.open(
       importDirectory,
       Database.OPEN_READONLY
@@ -80,4 +82,4 @@ const main = async () => {
   }
 };
 
-main();
+main();``
