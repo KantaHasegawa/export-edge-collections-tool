@@ -1,6 +1,6 @@
 {
   "name": "export-edge-collections",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "you can export microsoft-edge collections as bookmarks",
   "bin": {
   "export-edge-collections": "bin/index.js"
