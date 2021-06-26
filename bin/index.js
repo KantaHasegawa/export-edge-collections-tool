@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const Database = require("sqlite-async");
 const fs = require("fs");
 const netscape = require("netscape-bookmarks");
@@ -34,7 +36,7 @@ const main = async () => {
       reset
   );
   try {
-    if (!importDirectory){
+    if (!importDirectory) {
       throw `[ERROR] Please enter the path for the edge collections file`;
     }
     const db = await Database.open(
@@ -82,4 +84,5 @@ const main = async () => {
   }
 };
 
-main();``
+main();
+``;

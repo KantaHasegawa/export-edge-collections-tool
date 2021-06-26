@@ -1,13 +1,19 @@
 {
   "name": "export-edge-collections",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.3",
+  "description": "you can export microsoft-edge collections as bookmarks",
+  "bin": {
+  "export-edge-collections": "bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KantaHasegawa/export-edge-collections-tool.git"
+  },
+  "author": "KantaHasegawa",
+  "license": "MIT",
   "dependencies": {
     "netscape-bookmarks": "^0.1.1",
     "sqlite-async": "^1.1.1"
