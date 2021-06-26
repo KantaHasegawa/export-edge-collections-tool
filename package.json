@@ -1,9 +1,9 @@
 {
   "name": "export-edge-collections",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "you can export microsoft-edge collections as bookmarks",
   "bin": {
-  "export-edge-collections": "bin/index.js"
+    "export-edge-collections": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
